@@ -27,6 +27,8 @@ type Music struct {
 	GroupId uint
 	Path    string
 
+	AlbumId uint
+
 	Format   string
 	FileType string
 	// metadata
@@ -49,9 +51,10 @@ type Music struct {
 
 type Album struct {
 	gorm.Model
-	UserId  uint
-	GroupId uint
-	Path    string
+	UserId         uint
+	GroupId        uint
+	Path           string
+	FirstTrackPath string
 
 	// metadata
 	Album       string

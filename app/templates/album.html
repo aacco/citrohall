@@ -1,19 +1,18 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Music</title>
+        <title>Album</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
     </head>
     <body class="container">
-        <h1 class="display-4 mb-4">Music</h1>
+        <h1 class="display-4 mb-4">Album</h1>
         {{range .musicresource}}
-            <a href="/music/{{.Meta.ID}}">
+            <a href="/music/album/{{.Meta.ID}}">
                 <div>
                     <div>
-                        <img src="data:{{.PicExt}};base64,{{.PicBase}}" alt="" width="300" height="300">
+                        <img src="data:{{.PicExt}};base64,{{.PicBase}}" alt="" width="100" height="100">
                     </div>
                     <div>{{.Meta.Album}}</div>
-                    <div>{{.Meta.Title}}</div>
                 </div>
             </a>
         {{end}}
